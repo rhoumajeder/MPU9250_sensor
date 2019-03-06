@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp
+"mpu1\startup_stm32f429xx.o"
+"mpu1\main.o"
+"mpu1\stm32f4xx_it.o"
+"mpu1\stm32f4xx_hal_msp.o"
+"mpu1\mpu.o"
+"mpu1\madgwickahrs.o"
+"mpu1\stm32f4xx_hal_i2c.o"
+"mpu1\stm32f4xx_hal_i2c_ex.o"
+"mpu1\stm32f4xx_hal_tim.o"
+"mpu1\stm32f4xx_hal_tim_ex.o"
+"mpu1\stm32f4xx_hal_rcc.o"
+"mpu1\stm32f4xx_hal_rcc_ex.o"
+"mpu1\stm32f4xx_hal_flash.o"
+"mpu1\stm32f4xx_hal_flash_ex.o"
+"mpu1\stm32f4xx_hal_flash_ramfunc.o"
+"mpu1\stm32f4xx_hal_gpio.o"
+"mpu1\stm32f4xx_hal_dma_ex.o"
+"mpu1\stm32f4xx_hal_dma.o"
+"mpu1\stm32f4xx_hal_pwr.o"
+"mpu1\stm32f4xx_hal_pwr_ex.o"
+"mpu1\stm32f4xx_hal_cortex.o"
+"mpu1\stm32f4xx_hal.o"
+"mpu1\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "mpu1\mpu1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "mpu1.map" -o mpu1\mpu1.axf
